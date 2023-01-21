@@ -1,5 +1,4 @@
-@import "_mixin";
-@import "style";
+@import "../blocks/style";
 
 .home {
     &__splach{
@@ -12,8 +11,8 @@
 
         /* Gradient / Supersoft */
         background: $gragient-supersoft;
-        border-radius: 0px 0px 12px 12px;
+        border-radius: 0px 0px 12px 15px;
     }
 }
 
-@import "blocks/intro"
+@import "../blocks/section/intro"

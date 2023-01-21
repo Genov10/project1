@@ -9,10 +9,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: 100%;
 
     &__title {
         margin-top: 50%;
-        @include h1;
+        @include titles(38px, 46px);
     }
 }

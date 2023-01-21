@@ -1,9 +1,9 @@
-/*- Mixins -*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"); /*- Color from main to gradient -*/
 /*-  Gray-*/
 /*-  Gray text-*/
 /*-  Grey separator -*/
 /*- Gragient -*/
+/*- Mixins -*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -69,21 +69,14 @@ body {
 }
 
 .home__splach {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 0px 0px 60px;
   gap: 30px;
   /* Gradient / Supersoft */
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-  border-radius: 0px 0px 12px 12px;
+  border-radius: 0px 0px 12px 15px;
 }
 
 .intro {
@@ -94,7 +87,7 @@ body {
   background-image: url("/image/home/home-h.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
+  background-position: center;
 }
 .intro__title {
   margin-top: 50%;
