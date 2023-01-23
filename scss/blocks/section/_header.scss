@@ -3,7 +3,6 @@ header {
    left: 0;
    top: 0;
    width: 100%;
-   background-color: white;
    padding-bottom: 4%;
 }
 
@@ -49,7 +48,7 @@ header {
    display: flex;
    justify-content: end;
    padding: 3%;
-   background-color:  #F5F5FA;
+   background-color:  rgba(245, 245, 250, 0.2);
    &__address {
       display: none;
    }

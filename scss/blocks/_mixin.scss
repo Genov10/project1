@@ -1,4 +1,4 @@
-/*- Mixins -*/
+/*- Mixins 
 @mixin h1 {
     font-weight: 700;
     font-size: 38px;
@@ -31,6 +31,7 @@
     font-size: 16px;
     line-height: 20px;
 }
+-*/
 @mixin titles($size, $ln-heaight, $h3-caps: 0) {
     font-weight: 700;
     font-size: $size;
