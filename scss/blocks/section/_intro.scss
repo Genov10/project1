@@ -1,0 +1,17 @@
+.intro {
+    text-align: center;
+    color: #ffffff;
+
+    min-height: 600px;
+    width: 100%;
+
+    background-image: url("/image/home/home-h.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    &__title {
+        margin-top: 50%;
+        @include titles(38px, 46px);
+    }
+}

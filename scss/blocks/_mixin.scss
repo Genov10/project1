@@ -1,0 +1,43 @@
+/*- Mixins -*/
+@mixin h1 {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+}
+
+@mixin h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+@mixin h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+@mixin h3-caps {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@mixin h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+@mixin titles($size, $ln-heaight, $h3-caps: 0) {
+    font-weight: 700;
+    font-size: $size;
+    line-height: $ln-heaight;
+
+    @if $h3-caps != 0 {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
