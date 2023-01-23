@@ -1,0 +1,41 @@
+.footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 5%;
+   
+   &__address {
+      display: block;
+      color:  #B3B3BA;
+      font-weight: bold;
+      font-size: .8rem;
+      padding-bottom: 6%;
+   }
+}
+.contact {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   &>li {
+      padding-bottom: 6%;
+   }
+   &__number {
+      color:  #B3B3BA;
+      font-weight: bold;
+      font-size: .8rem;
+   }
+   &__facebook {
+      display:  block;
+   }
+   &__img {
+      width: 1.2rem;
+   }
+   &__email {
+      color: #24A3FF;
+   }
+   &__email:hover {
+      color: #F0145A;
+   }
+}

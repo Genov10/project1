@@ -1,0 +1,259 @@
+header {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background-color: white;
+   padding-bottom: 4%;
+}
+
+.logo {
+   display: flex;
+   width: 50%;
+   padding-left: 3%;
+   &__img {
+      width: 100%;
+   }
+}
+
+.language {
+   #tab-1,
+   #tab-2 {
+      display: none;
+   }
+   &__uk::before,
+   &__en::before {      
+      position: absolute;
+      top: 3%;
+      padding: 5px;
+      color:  #B3B3BA;
+      font-size: .8rem;
+      font-weight: bold;
+      border-radius: 6px;
+   }
+   &__en::before {
+      content: "EN";
+      left: 3%;
+   }
+   &__uk::before {
+      content: "УК";
+      left: 14%;
+   }
+   #tab-1:checked+&__en::before, 
+   #tab-2:checked+&__uk::before { 
+      color:  white;
+      background-color: #F0145A;
+   }
+}
+.information {
+   display: flex;
+   justify-content: end;
+   padding: 3%;
+   background-color:  #F5F5FA;
+   &__address {
+      display: none;
+   }
+   &__number {
+      color:  #B3B3BA;
+      font-weight: bold;
+   }
+   &__facebook {
+      display:  none;
+   }
+}
+
+#toggle {
+   display: none;
+}
+.toggle::before {
+   content: "☰";
+   position: absolute;
+   left: 90%;
+   top: 52%;
+   padding: .5%;
+   border-radius: 6px;
+   font-size:  1.5rem;
+   color: #323264;
+}
+#toggle:checked+.toggle::before {
+   position: absolute;
+   left: 90%;
+   top:  52%;
+   background-color: #E6E6F0;
+}
+.menu {
+   display:  none;
+   padding: 5%;
+   background-color:  white;
+   &__linkChoose {
+      display: block;
+      color: #F0145A;
+      font-size:  1.3rem;
+      font-weight: bold;
+   }
+   &__link {
+      display: block;
+      color: #24A3FF;
+      font-size:  1.3rem;
+      font-weight: bold;
+      transition: all .5s;
+   }
+   &__link:hover {
+      color: #F0145A;
+      transition: all .5s;
+   }
+}
+#toggle:checked~.menu {
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   align-items: center;
+   position: fixed;
+   top: 50vh;
+   width: 100%;
+   border-radius: 6px;
+   line-height: 9vh;
+}
+
+@media screen and(min-width:480px) {
+   .header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      padding-bottom: 0%;
+   }
+   .information {
+      display: flex;
+      justify-content: space-between;      
+      padding-left: 25%;
+      padding-right: 15%;
+      &__address {
+         display: block;
+         color:  #B3B3BA;
+         font-weight: bold;
+         font-size: .8rem;
+      }
+      &__number {
+         color:  #B3B3BA;
+         font-weight: bold;
+         font-size: .8rem;
+      }
+      &__facebook {
+         display:  block;
+      }
+      &__img {
+         position: absolute;
+         top: 6%;
+         width: 1.2rem;
+      }
+   }
+   .toggle::before {
+      display: none;
+   }
+   .menu {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
+      &__linkChoose {
+         font-size: 1rem;
+         position: relative;
+      }
+      &__linkChoose::before {
+         content: "";
+         position: absolute;
+         top: 100%;
+         height: 4px;
+         width: 100%;
+         background-color: #F0145A;
+      }
+      &__link {
+         font-size: 1rem;
+         position: relative;
+      }
+   }
+   .language {
+      &__uk::before,
+      &__en::before {      
+         position: absolute;
+         top: 6%;
+      }
+   }
+}
+
+@media screen and(min-width:840px) {
+   .header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      padding-bottom: 0%;
+   }
+   .logo {
+      position: absolute;
+      top: 5%;
+      width: 20%;
+   }
+   .information {
+      position: absolute;
+      left: 70%;
+      top: 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0;
+      width: 25%;
+      background-color: white;
+      &__address {
+         display: block;
+         color:  #B3B3BA;
+         font-weight: bold;
+         font-size: .8rem;
+      }
+      &__number {
+         color:  #B3B3BA;
+         font-weight: bold;
+         font-size: .8rem;
+      }
+      &__facebook {
+         display:  block;
+      }
+      &__img {
+         width: 1.2rem;
+      }
+   }
+   .language {
+      &__uk::before,
+      &__en::before {      
+         position: absolute;
+         top: 7%;
+      }
+      &__uk::before {
+         left:  65%;
+      }
+      &__en::before {
+         left: 60% ;
+      }      
+   .toggle::before {
+      display: none;
+   }
+   .menu {
+      padding: 0;
+      &__linkChoose {
+         font-size: 1rem;
+         position: relative;
+      }
+      &__linkChoose::before {
+         content: "";
+         position: absolute;
+         top: 100%;
+         height: 4px;
+         width: 100%;
+         background-color: #F0145A;
+      }
+      &__link {
+         font-size: 1rem;
+         position: relative;
+      }
+   }
+   }
+}
