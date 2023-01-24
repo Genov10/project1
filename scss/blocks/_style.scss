@@ -14,4 +14,32 @@ body {
     max-width: 315px;
     width: 100%;
     margin: 0 auto;
+    
+}
+
+.page-links {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: $active;
+    transition: color .2s ease-in;
+
+    &:hover {
+        color: $active-hover;
+    }
+}
+@media screen and(min-width:720px) {
+    .container {
+        max-width: 640px;
+    }
+}
+@media screen and(min-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
 }
