@@ -17,7 +17,7 @@ body {
     
 }
 
-.page-links {
+.page__links {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
@@ -30,9 +30,11 @@ body {
     transition: color .2s ease-in;
 
     &:hover {
-        color: $active-hover;
+        color: $accent;
     }
 }
+
+
 @media screen and(min-width:720px) {
     .container {
         max-width: 640px;
@@ -41,5 +43,15 @@ body {
 @media screen and(min-width: 1024px) {
     .container {
         max-width: 900px;
+    }
+}
+@media screen and(min-width: 1440px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+@media screen and(min-width: 1920px) {
+    .container {
+        max-width: 1600px;
     }
 }
