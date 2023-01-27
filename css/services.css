@@ -121,10 +121,6 @@ body {
   border-radius: 0px 0px 12px 12px;
 }
 
-.home__splach {
-  gap: 30px;
-}
-
 header {
   position: fixed;
   left: 0;
@@ -378,23 +374,6 @@ header {
     position: relative;
   }
 }
-.intro {
-  text-align: center;
-  color: #ffffff;
-  min-height: 600px;
-  width: 100%;
-  background-image: url("/image/home/home-h.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.intro__title {
-  margin-top: 50%;
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 46px;
-}
-
 .services__intro {
   color: #ffffff;
   width: 100%;
