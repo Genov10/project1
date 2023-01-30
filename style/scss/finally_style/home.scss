@@ -1,0 +1,32 @@
+@import "../blocks/style";
+@import "../blocks/section/header";
+@import "../blocks/section/splach";
+//---------------------------------//
+
+.home {
+    &__splach{
+        gap: 30px;
+    }
+}
+
+.intro {
+    text-align: center;
+    color: #ffffff;
+
+    min-height: 600px;
+    width: 100%;
+
+    background-image: url("/image/home/home-h.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__title {
+        @include h1;
+        margin-top: 50%;
+    }
+}
+
+//---------------------------------//
+@import "../blocks/section/services-intro";
+@import "../blocks/section/footer";
