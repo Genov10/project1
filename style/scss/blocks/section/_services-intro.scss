@@ -3,7 +3,7 @@
     width: 100%;
 
     &__title {
-        @include titles(30px, 37px);
+        @include h2;
         background: $gragient-red-text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -42,7 +42,7 @@
 		cursor: pointer;
     }
     &__title-link {
-        @include titles(22px, 27px);
+        @include h3;
         color: $active;
         
         text-decoration: none;
