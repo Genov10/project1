@@ -104,21 +104,11 @@ body {
   }
 }
 [class*=__splach] {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 0px 0px 60px;
   /* Gradient / Supersoft */
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px;
-}
-
-[class*="__splach::after"] {
-  width: 315px;
-  height: 10px;
-  /* Gradient / Supersoft */
-  background: #CACADB;
-  border-radius: 0px 0px 12px 12px;
+  box-shadow: 0 10px #CACADB;
 }
 
 header {
