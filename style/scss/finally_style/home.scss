@@ -72,7 +72,6 @@
         
         label {
             cursor: pointer;
-
             @include h2;
             color: $text;
         }
@@ -82,7 +81,10 @@
         display: none;
     }
 
-    & input:checked+ &__tabs label {
+    & input[id="tab1"]:checked~ &__tabs label[for="tab1"],
+    & input[id="tab2"]:checked~ &__tabs label[for="tab2"],
+    & input[id="tab3"]:checked~ &__tabs label[for="tab3"],
+    & input[id="tab4"]:checked~ &__tabs label[for="tab4"] {
         background: $gragient-red-text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

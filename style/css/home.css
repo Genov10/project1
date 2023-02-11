@@ -420,7 +420,6 @@ header {
 .experience__tabs {
   display: flex;
   -webkit-hyphens: none;
-      -ms-hyphens: none;
           hyphens: none;
   gap: 30px;
   margin-bottom: 30px;
@@ -435,7 +434,7 @@ header {
 .experience input {
   display: none;
 }
-.experience input:checked + .experience__tabs label {
+.experience input[id=tab1]:checked ~ .experience__tabs label[for=tab1], .experience input[id=tab2]:checked ~ .experience__tabs label[for=tab2], .experience input[id=tab3]:checked ~ .experience__tabs label[for=tab3], .experience input[id=tab4]:checked ~ .experience__tabs label[for=tab4] {
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
