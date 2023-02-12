@@ -376,7 +376,7 @@ header {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 .services__intro__content {
   width: 100%;

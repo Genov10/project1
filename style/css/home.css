@@ -417,6 +417,10 @@ header {
   width: 100%;
   margin: 30px 0;
 }
+.experience__content {
+  display: flex;
+  flex-direction: column;
+}
 .experience__tabs {
   display: flex;
   -webkit-hyphens: none;
@@ -434,26 +438,26 @@ header {
 .experience input {
   display: none;
 }
-.experience input[id=tab1]:checked ~ .experience__tabs label[for=tab1], .experience input[id=tab2]:checked ~ .experience__tabs label[for=tab2], .experience input[id=tab3]:checked ~ .experience__tabs label[for=tab3], .experience input[id=tab4]:checked ~ .experience__tabs label[for=tab4] {
+.experience input[id=tab1]:checked ~ .experience__content label[for=tab1], .experience input[id=tab2]:checked ~ .experience__content label[for=tab2], .experience input[id=tab3]:checked ~ .experience__content label[for=tab3], .experience input[id=tab4]:checked ~ .experience__content label[for=tab4] {
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .experience input[id=tab1]:checked ~ .experience__content .tab1, .experience input[id=tab2]:checked ~ .experience__content .tab2, .experience input[id=tab3]:checked ~ .experience__content .tab3, .experience input[id=tab4]:checked ~ .experience__content .tab4 {
-  display: block;
+  display: inline-block;
 }
-.experience__article {
-  display: none;
-  color: #ffffff;
-}
-.experience__article::before {
+.experience__items::before {
   content: "";
   display: block;
   height: 4px;
   width: 100%;
   margin-bottom: 30px;
   background: rgba(255, 255, 255, 0.3);
+}
+.experience__article {
+  display: none;
+  color: #ffffff;
 }
 .experience__title {
   font-weight: 700;
@@ -467,6 +471,21 @@ header {
   line-height: 30px;
 }
 
+@media screen and (min-width: 1024px) {
+  .experience__content {
+    flex-direction: row;
+  }
+  .experience__tabs {
+    flex-direction: column;
+    max-width: 50%;
+  }
+  .experience__items::before {
+    display: inline-block;
+    margin: 0 60px;
+    height: 303px;
+    width: 4px;
+  }
+}
 .services__intro {
   color: #ffffff;
   width: 100%;
@@ -479,7 +498,7 @@ header {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 .services__intro__content {
   width: 100%;

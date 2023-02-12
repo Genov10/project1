@@ -62,7 +62,11 @@
     width: 100%;
     margin: 30px 0;
 
-    
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__tabs {
         display: flex;
         hyphens: none;
@@ -75,16 +79,17 @@
             @include h2;
             color: $text;
         }
+        
     }
 
     & input {
         display: none;
     }
 
-    & input[id="tab1"]:checked~ &__tabs label[for="tab1"],
-    & input[id="tab2"]:checked~ &__tabs label[for="tab2"],
-    & input[id="tab3"]:checked~ &__tabs label[for="tab3"],
-    & input[id="tab4"]:checked~ &__tabs label[for="tab4"] {
+    & input[id="tab1"]:checked~ &__content label[for="tab1"],
+    & input[id="tab2"]:checked~ &__content label[for="tab2"],
+    & input[id="tab3"]:checked~ &__content label[for="tab3"],
+    & input[id="tab4"]:checked~ &__content label[for="tab4"] {
         background: $gragient-red-text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -95,14 +100,10 @@
     & input[id="tab2"]:checked~ &__content .tab2,
     & input[id="tab3"]:checked~ &__content .tab3,
     & input[id="tab4"]:checked~ &__content .tab4 {
-        display: block;
+        display: inline-block;
     }
 
-
-    &__article{
-        display: none;
-        color: #ffffff;
-
+    &__items {
         &::before {
             content: '';
             display: block;
@@ -112,6 +113,10 @@
             background:  rgba(255, 255, 255, 0.3);
         }
     }
+    &__article{
+        display: none;
+        color: #ffffff;
+    }
 
     &__title {
         @include titles(20px, 24px);
@@ -120,6 +125,25 @@
 
     &__text {
         @include text(30px, 19px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .experience__content { 
+        flex-direction: row;
+    }
+    .experience__tabs {
+        flex-direction: column;
+        max-width: 50%;
+    }
+    .experience__items {
+
+        &::before {
+            display: inline-block;
+            margin: 0 60px;
+            height: 303px;
+            width: 4px;
+        }
     }
 }
 //---------------------------------//
