@@ -104,6 +104,8 @@ body {
   }
 }
 [class*=__splach] {
+  display: flex;
+  flex-direction: column;
   padding: 0px 0px 60px;
   /* Gradient / Supersoft */
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
@@ -291,7 +293,7 @@ header {
     top: 6%;
   }
 }
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 720px) {
   .header {
     position: fixed;
     left: 0;

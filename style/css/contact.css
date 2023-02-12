@@ -283,7 +283,7 @@ header {
     top: 6%;
   }
 }
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 720px) {
   .header {
     position: fixed;
     left: 0;
