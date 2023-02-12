@@ -61,7 +61,7 @@
     }
 }
 
-@media screen and(min-width: 480px) {
+@media screen and (min-width: 480px) {
 	.services__intro__content {
         margin-top: 60px;
 	}
@@ -70,24 +70,24 @@
         margin-bottom: 60px;
 	}
 }
-@media screen and(min-width: 720px) {
+@media screen and (min-width: 720px) {
 	.services__intro__title {
         @include h1
     }
 }
-@media screen and(min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 	.services__intro__item {
 		max-width: 260px;
         margin-bottom: 60px;
 	}
 }
-@media screen and(min-width: 1440px) {
+@media screen and (min-width: 1440px) {
     .services__intro__item {
         max-width: 400px;
         //margin-bottom: 60px;
     }
 }
-@media screen and(min-width: 1920px) {
+@media screen and (min-width: 1920px) {
     .services__intro__item {
         max-width: 490px;
     }
