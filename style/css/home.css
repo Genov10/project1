@@ -104,6 +104,8 @@ body {
   }
 }
 [class*=__splach] {
+  display: flex;
+  flex-direction: column;
   padding: 0px 0px 60px;
   /* Gradient / Supersoft */
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
@@ -291,7 +293,7 @@ header {
     top: 6%;
   }
 }
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 720px) {
   .header {
     position: fixed;
     left: 0;
@@ -398,29 +400,33 @@ header {
   position: absolute;
   left: calc(50% - 21px);
   bottom: 30px;
-  padding: 5px 0 0;
   margin: 0;
   cursor: pointer;
-  opacity: 0.5;
+  border: none;
   background: none;
+}
+.intro__btn img {
+  padding: 15px 12px;
+  opacity: 0.5;
+  width: 18px;
+  height: 9px;
   border-radius: 100%;
   border: 2px solid #FFFFFF;
 }
-.intro__btn:hover {
+.intro__btn img:hover {
   border-color: #F0145A;
-}
-.intro__btn:hover svg {
-  fill: #F0145A;
 }
 
 .experience {
   width: 100%;
-  margin: 30px 0;
+}
+.experience__content {
+  display: flex;
+  flex-direction: column;
 }
 .experience__tabs {
   display: flex;
-  -webkit-hyphens: none;
-          hyphens: none;
+  width: 100%;
   gap: 30px;
   margin-bottom: 30px;
 }
@@ -431,10 +437,13 @@ header {
   line-height: 37px;
   color: #B3B3BA;
 }
+.experience__tabs label:hover {
+  color: #F0145A;
+}
 .experience input {
   display: none;
 }
-.experience input[id=tab1]:checked ~ .experience__tabs label[for=tab1], .experience input[id=tab2]:checked ~ .experience__tabs label[for=tab2], .experience input[id=tab3]:checked ~ .experience__tabs label[for=tab3], .experience input[id=tab4]:checked ~ .experience__tabs label[for=tab4] {
+.experience input[id=tab1]:checked ~ .experience__content label[for=tab1], .experience input[id=tab2]:checked ~ .experience__content label[for=tab2], .experience input[id=tab3]:checked ~ .experience__content label[for=tab3], .experience input[id=tab4]:checked ~ .experience__content label[for=tab4] {
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -443,17 +452,23 @@ header {
 .experience input[id=tab1]:checked ~ .experience__content .tab1, .experience input[id=tab2]:checked ~ .experience__content .tab2, .experience input[id=tab3]:checked ~ .experience__content .tab3, .experience input[id=tab4]:checked ~ .experience__content .tab4 {
   display: block;
 }
-.experience__article {
-  display: none;
-  color: #ffffff;
+.experience__items {
+  display: flex;
+  flex-direction: column;
 }
-.experience__article::before {
+.experience__items::before {
   content: "";
   display: block;
   height: 4px;
   width: 100%;
   margin-bottom: 30px;
   background: rgba(255, 255, 255, 0.3);
+}
+.experience__article {
+  display: none;
+  max-width: 100%;
+  width: 100%;
+  color: #ffffff;
 }
 .experience__title {
   font-weight: 700;
@@ -467,6 +482,77 @@ header {
   line-height: 30px;
 }
 
+@media screen and (min-width: 720px) {
+  .home__splach {
+    gap: 60px;
+  }
+  .intro {
+    min-height: 1024px;
+    background-size: cover;
+  }
+  .intro__title {
+    width: 800px;
+    height: 46px;
+    left: calc(50% - 400px);
+    top: calc(50% - 23px);
+  }
+  .experience__tabs label {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .experience__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .intro {
+    min-height: 768px;
+    background-size: contain;
+  }
+  .experience__content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .experience__tabs {
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 375px;
+    margin-bottom: 0;
+  }
+  .experience__article {
+    max-width: 405px;
+  }
+  .experience__items {
+    flex-direction: row;
+    align-items: center;
+  }
+  .experience__items::before {
+    display: block;
+    margin: 0 60px;
+    height: 303px;
+    width: 4px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .intro {
+    min-height: 800px;
+  }
+  .experience__article {
+    max-width: 580px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .intro {
+    min-height: 1000px;
+  }
+  .experience__article {
+    max-width: 860px;
+  }
+}
 .services__intro {
   color: #ffffff;
   width: 100%;
@@ -479,7 +565,7 @@ header {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 .services__intro__content {
   width: 100%;
