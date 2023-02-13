@@ -1,10 +1,39 @@
-[class*="__splach"] {
+[class*="__bg"] {
     display: flex;
     flex-direction: column;
     padding: 0px 0px 60px;
+
     /* Gradient / Supersoft */
     background: $gragient-supersoft;
     border-radius: 0px 0px 12px 12px;
-	box-shadow: 0 10px #CACADB;
-	//box-shadow: 0 20px #E7E7F2;
+    gap: 30px;
+}
+
+[class*="__shadow-second"] {
+    &::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+
+        width: calc(100% - 80px);
+        height: 10px;
+
+        background-color:  #E7E7F2;
+        border-radius: 0px 0px 12px 12px;
+    }
+}
+
+[class*="__shadow-first"] {
+    
+    &::after {
+        content: '';
+        display: block;
+        width: calc(100% - 40px);
+        height: 10px;
+
+        margin: 0 auto;
+        
+        background-color: #CACADB;
+        border-radius: 0px 0px 12px 12px;
+    }
 }

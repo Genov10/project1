@@ -83,7 +83,7 @@ body {
   color: #F0145A;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .container {
     max-width: 640px;
   }
@@ -103,14 +103,34 @@ body {
     max-width: 1600px;
   }
 }
-[class*=__splach] {
+[class*=__bg] {
   display: flex;
   flex-direction: column;
   padding: 0px 0px 60px;
   /* Gradient / Supersoft */
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px;
-  box-shadow: 0 10px #CACADB;
+  gap: 30px;
+}
+
+[class*=__shadow-second]::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: calc(100% - 80px);
+  height: 10px;
+  background-color: #E7E7F2;
+  border-radius: 0px 0px 12px 12px;
+}
+
+[class*=__shadow-first]::after {
+  content: "";
+  display: block;
+  width: calc(100% - 40px);
+  height: 10px;
+  margin: 0 auto;
+  background-color: #CACADB;
+  border-radius: 0px 0px 12px 12px;
 }
 
 header {
@@ -293,7 +313,7 @@ header {
     top: 6%;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .header {
     position: fixed;
     left: 0;
@@ -374,7 +394,10 @@ header {
 }
 
 .intro {
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   color: #ffffff;
   min-height: 600px;
@@ -385,22 +408,18 @@ header {
   background-size: cover;
 }
 .intro__title {
-  width: 315px;
-  height: 138px;
-  position: absolute;
-  left: calc(50% - 157.5px);
-  top: calc(50% - 69px);
+  max-width: 315px;
+  width: 100%;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 38px;
   line-height: 46px;
 }
 .intro__btn {
-  width: 42px;
-  height: 42px;
-  position: absolute;
-  left: calc(50% - 21px);
-  bottom: 30px;
-  margin: 0;
+  max-width: 42px;
+  width: 100%;
+  margin-top: 160px;
+  margin-bottom: 30px;
   cursor: pointer;
   border: none;
   background: none;
@@ -431,6 +450,7 @@ header {
   margin-bottom: 30px;
 }
 .experience__tabs label {
+  white-space: nowrap;
   cursor: pointer;
   font-weight: 700;
   font-size: 30px;
@@ -482,8 +502,8 @@ header {
   line-height: 30px;
 }
 
-@media screen and (min-width: 720px) {
-  .home__splach {
+@media screen and (min-width: 768px) {
+  .home__bg {
     gap: 60px;
   }
   .intro {
@@ -491,10 +511,10 @@ header {
     background-size: cover;
   }
   .intro__title {
-    width: 800px;
-    height: 46px;
-    left: calc(50% - 400px);
-    top: calc(50% - 23px);
+    max-width: 800px;
+  }
+  .intro__btn {
+    margin-top: 420px;
   }
   .experience__tabs label {
     font-weight: 700;
@@ -511,6 +531,9 @@ header {
   .intro {
     min-height: 768px;
     background-size: contain;
+  }
+  .intro__btn {
+    margin-top: 290px;
   }
   .experience__content {
     flex-direction: row;
@@ -541,6 +564,9 @@ header {
   .intro {
     min-height: 800px;
   }
+  .intro__btn {
+    margin-top: 405px;
+  }
   .experience__article {
     max-width: 580px;
   }
@@ -548,6 +574,9 @@ header {
 @media screen and (min-width: 1920px) {
   .intro {
     min-height: 1000px;
+  }
+  .intro__btn {
+    margin-top: 305px;
   }
   .experience__article {
     max-width: 860px;
@@ -614,7 +643,7 @@ header {
   margin-top: 15px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .services__intro__content {
     margin-top: 60px;
   }
@@ -622,8 +651,6 @@ header {
     max-width: 294px;
     margin-bottom: 60px;
   }
-}
-@media screen and (min-width: 720px) {
   .services__intro__title {
     font-weight: 700;
     font-size: 38px;
