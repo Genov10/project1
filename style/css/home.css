@@ -402,7 +402,7 @@ header {
   color: #ffffff;
   min-height: 600px;
   width: 100%;
-  background-image: url("/image/home/home-h.png");
+  background-image: url("../../../image/home/home-h.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
