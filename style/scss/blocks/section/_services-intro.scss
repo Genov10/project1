@@ -61,16 +61,16 @@
     }
 }
 
-@media screen and (min-width: 480px) {
-	.services__intro__content {
+
+@media screen and (min-width: 768px) {
+    .services__intro__content {
         margin-top: 60px;
 	}
 	.services__intro__item {
 		max-width: 294px;
         margin-bottom: 60px;
 	}
-}
-@media screen and (min-width: 720px) {
+
 	.services__intro__title {
         @include h1
     }

@@ -12,36 +12,36 @@
 
 // ---------------- //
 .intro {
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     color: #ffffff;
 
     min-height: 600px;
     width: 100%;
 
-    background-image: url("/image/home/home-h.png");
+    background-image: url("../../../image/home/home-h.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     
+    
     &__title {
-        width: 315px;
-        height: 138px;
+        max-width: 315px;
+        width: 100%;
+        margin: 0 auto;
 
-        position: absolute;
-        left: calc(50% - 315px/2);
-        top: calc(50% - 138px/2);
         @include h1;
     }
+
     &__btn {
-        width: 42px;
-        height: 42px;
+        max-width: 42px;
+        width: 100%;
 
-        position: absolute;
-        left: calc(50% - 42px/2);
-        bottom: 30px;
-
-        margin: 0;
+        margin-top: 160px;
+        margin-bottom: 30px;
 
         cursor: pointer;
         border: none;
@@ -78,7 +78,9 @@
         gap: 30px;
         margin-bottom: 30px;
         
+        
         label {
+            white-space: nowrap;
             cursor: pointer;
             @include h2;
             color: $text;
@@ -141,9 +143,9 @@
 }
 
 // Media home
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
     .home {
-        &__splach {
+        &__bg {
             gap: 60px;
         }
     }
@@ -152,13 +154,12 @@
         background-size: cover;
 
         &__title {
-            width: 800px;
-            height: 46px;
-            left: calc(50% - 800px/2);
-            top: calc(50% - 46px/2);
+            max-width: 800px;
         }
 
-        
+        &__btn {
+            margin-top: 420px;
+        }
     }
     .experience__tabs {
         label {
@@ -174,6 +175,9 @@
     .intro {
         min-height: 768px;
         background-size: contain;
+        &__btn {
+            margin-top: 290px;
+        }
     }
     
     .experience__content { 
@@ -205,6 +209,10 @@
 @media screen and (min-width: 1440px) {
     .intro {
         min-height: 800px;
+        
+        &__btn {
+            margin-top: 405px;
+        }
     }
     .experience__article {
         max-width: 580px;
@@ -214,6 +222,10 @@
 @media screen and (min-width: 1920px) {
     .intro {
         min-height: 1000px;
+
+        &__btn {
+            margin-top: 305px;
+        }
     }
     .experience__article {
         max-width: 860px;

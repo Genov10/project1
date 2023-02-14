@@ -83,7 +83,7 @@ body {
   color: #F0145A;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .container {
     max-width: 640px;
   }
@@ -283,7 +283,7 @@ header {
     top: 6%;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .header {
     position: fixed;
     left: 0;
