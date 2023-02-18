@@ -1,0 +1,127 @@
+@import "../blocks/style";
+@import "../blocks/splach";
+@import "../blocks/section/header";
+//---------------------------------//
+
+.home {
+    overflow: hidden;
+    &__splach{
+        gap: 30px;
+    }
+}
+
+.intro {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+
+    min-height: 600px;
+    width: 100%;
+
+    background-image: url("/image/home/home-h.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    &__title {
+        width: 315px;
+        height: 138px;
+
+        position: absolute;
+        left: calc(50% - 315px/2);
+        top: calc(50% - 138px/2);
+        @include h1;
+    }
+    &__btn {
+        width: 42px;
+        height: 42px;
+
+        position: absolute;
+        left: calc(50% - 42px/2);
+        bottom: 30px;
+
+        padding: 5px 0 0;
+        margin: 0;
+
+        cursor: pointer;
+        opacity: 0.5;
+        background: none;
+
+        border-radius: 100%;
+        border: 2px solid #FFFFFF;
+
+        &:hover {
+            svg {
+                fill: $accent;
+            }
+            border-color: $accent;
+        }
+    }
+}
+.experience {
+    width: 100%;
+    margin: 30px 0;
+
+    
+    &__tabs {
+        display: flex;
+        hyphens: none;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        
+        label {
+            cursor: pointer;
+            @include h2;
+            color: $text;
+        }
+    }
+
+    & input {
+        display: none;
+    }
+
+    & input[id="tab1"]:checked~ &__tabs label[for="tab1"],
+    & input[id="tab2"]:checked~ &__tabs label[for="tab2"],
+    & input[id="tab3"]:checked~ &__tabs label[for="tab3"],
+    & input[id="tab4"]:checked~ &__tabs label[for="tab4"] {
+        background: $gragient-red-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    & input[id="tab1"]:checked~ &__content .tab1,
+    & input[id="tab2"]:checked~ &__content .tab2,
+    & input[id="tab3"]:checked~ &__content .tab3,
+    & input[id="tab4"]:checked~ &__content .tab4 {
+        display: block;
+    }
+
+
+    &__article{
+        display: none;
+        color: #ffffff;
+
+        &::before {
+            content: '';
+            display: block;
+            height: 4px;
+            width: 100%;
+            margin-bottom: 30px;
+            background:  rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    &__title {
+        @include titles(20px, 24px);
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        @include text(30px, 19px);
+    }
+}
+//---------------------------------//
+@import "../blocks/section/services-intro";
+@import "../blocks/section/footer";

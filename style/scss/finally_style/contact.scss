@@ -1,0 +1,135 @@
+@import "../blocks/reset";
+@import "../blocks/style";
+@import "../blocks/vars";
+@import "../blocks/section/header";
+@import "../blocks/section/footer";
+.conteiner {
+   margin-top: 30%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.info {
+   width: 90%;
+   margin-left: 5%;
+   &__address,
+   &__number {
+      color:  #46466E; 
+      box-shadow: 0 10px 0 #E6E6F0;
+   }
+   &__number {
+      padding-top: 4%;
+   }
+   &__facebookImage {
+      padding-top: 4%;
+      width: 10%;
+      float: left;
+   }
+   &__facebookText {
+      padding: 4%;
+      color:  #B3B3BA; 
+      font-weight: bold;
+   }
+}
+.form {
+   width: 90%;
+   margin-left: 5%;
+   margin-top: 5%;
+   background-color: #E6E6F0;
+   border-radius: 6px;
+   &__header {
+      margin-top: 2%;
+      color: #F0145A;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+   }
+   &__text {
+      margin-left: 10%;
+      margin-top: 2%;
+      color:  #B3B3BA; 
+      font-size: 1.2rem;
+      font-weight: bold;
+   }
+   .input {
+      margin: 2% 0% 2% 9%;
+      width: 80%;
+      border: 1px solid white;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      line-height: 2rem;
+   }
+   &__message {
+      height: 8rem;
+   }
+   &__button {
+      display: block;
+      width: 40%;
+      margin: 3% auto;
+      text-align: center;
+      color:  white;
+      font-size: 1.2rem;
+      background-color: #24A3FF;
+      border: 2px solid #24A3FF;
+      box-shadow: 0 0 4px #24A3FF;
+      border-radius: 4px;
+      transition: all 0.5s;
+   }
+   &__button:hover {
+      background-color: #F0145A;
+      border: 2px solid #F0145A;
+      box-shadow: 0 0 25px #F0145A;
+      transition: all 0.5s;
+   }
+}
+@media screen and (min-width:480px) {
+   .conteiner {
+      margin-top: 20%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+   }
+   .info {
+      width: 40%;
+      margin-left: 0%;
+   }
+   .form {
+      width: 40%;
+      margin-left: 0%;
+      margin-top: 0%;
+      &__header {
+         margin-top: 4%;
+         font-size: 4vw;
+      }
+      &__button {
+         display: block;
+         width: 40%;
+      }
+   }
+}
+
+@media screen and (min-width:840px) {
+   .conteiner {
+      margin-top: 12%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+   }
+   .info {
+      width: 40%;
+      margin-left: 0%;
+   }
+   .form {
+      width: 40%;
+      margin-left: 0%;
+      margin-top: 0%;
+      &__header {
+         margin-top: 4%;
+         font-size: 2rem;
+      }
+      &__button {
+         display: block;
+         width: 40%;
+      }
+   }
+}

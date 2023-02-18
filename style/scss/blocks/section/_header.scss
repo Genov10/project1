@@ -5,6 +5,7 @@ header {
    width: 100%;
    padding-bottom: 4%;
    z-index: 1;
+   background-color: white;
 }
 
 .logo {
@@ -83,7 +84,7 @@ header {
 }
 .menu {
    display:  none;
-   padding: 5%;
+   padding: 5% 0% 2% 0%;
    background-color:  white;
    &__linkChoose {
       display: block;
@@ -115,12 +116,17 @@ header {
    line-height: 9vh;
 }
 
-@media screen and(min-width:480px) {
+@media screen and (min-width:480px) {
    .header {
       position: fixed;
       left: 0;
       top: 0;
       padding-bottom: 0%;
+   }
+   .logo {
+      position: absolute;
+      top: 38%;
+      width: 20%;
    }
    .information {
       display: flex;
@@ -143,7 +149,7 @@ header {
       }
       &__img {
          position: absolute;
-         top: 6%;
+         top: 15%;
          width: 1.2rem;
       }
    }
@@ -181,7 +187,7 @@ header {
    }
 }
 
-@media screen and(min-width:840px) {
+@media screen and (min-width:840px) {
    .header {
       position: fixed;
       left: 0;
@@ -237,7 +243,6 @@ header {
       display: none;
    }
    .menu {
-      padding: 0;
       &__linkChoose {
          font-size: 1rem;
          position: relative;

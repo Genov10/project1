@@ -1,13 +1,5 @@
 @import "../blocks/style";
-@import "../blocks/section/splach";
-
-.home {
-    &__splach{
-        gap: 30px;
-    }
-}
-
+@import "../blocks/splach";
 @import "../blocks/section/header";
-@import "../blocks/section/intro";
 @import "../blocks/section/services-intro";
 @import "../blocks/section/footer";

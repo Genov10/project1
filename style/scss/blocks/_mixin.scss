@@ -42,6 +42,7 @@
         text-transform: uppercase;
     }
 }
+
 @mixin text($ln-heaight, $size: 16px) {
     font-weight: 400;
     font-size: $size;

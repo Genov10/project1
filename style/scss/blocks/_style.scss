@@ -35,22 +35,22 @@ body {
 }
 
 
-@media screen and(min-width:720px) {
+@media screen and (min-width:720px) {
     .container {
         max-width: 640px;
     }
 }
-@media screen and(min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .container {
         max-width: 900px;
     }
 }
-@media screen and(min-width: 1440px) {
+@media screen and (min-width: 1440px) {
     .container {
         max-width: 1320px;
     }
 }
-@media screen and(min-width: 1920px) {
+@media screen and (min-width: 1920px) {
     .container {
         max-width: 1600px;
     }
