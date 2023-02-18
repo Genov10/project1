@@ -187,7 +187,11 @@ header {
    }
 }
 
-@media screen and (min-width:840px) {
+<<<<<<< HEAD
+@media screen and (min-width:840px) {}
+=======
+@media screen and (min-width:768px) {
+>>>>>>> f7343cee72096d39970765185580098de030f2b8
    .header {
       position: fixed;
       left: 0;

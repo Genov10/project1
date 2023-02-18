@@ -55,10 +55,6 @@ table {
   border-spacing: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 html,
 body {
   font-weight: 400;
@@ -107,17 +103,36 @@ body {
     max-width: 1600px;
   }
 }
-<<<<<<<< HEAD:style/scss/finally_style/home.css
-[class*=__splach] {
+[class*=__bg] {
+  display: flex;
+  flex-direction: column;
   padding: 0px 0px 60px;
   /* Gradient / Supersoft */
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px;
-  box-shadow: 0 10px #CACADB;
+  gap: 30px;
 }
 
-========
->>>>>>>> f7343cee72096d39970765185580098de030f2b8:style/css/about.css
+[class*=__shadow-second]::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: calc(100% - 80px);
+  height: 10px;
+  background-color: #E7E7F2;
+  border-radius: 0px 0px 12px 12px;
+}
+
+[class*=__shadow-first]::after {
+  content: "";
+  display: block;
+  width: calc(100% - 40px);
+  height: 10px;
+  margin: 0 auto;
+  background-color: #CACADB;
+  border-radius: 0px 0px 12px 12px;
+}
+
 header {
   position: fixed;
   left: 0;
@@ -125,7 +140,6 @@ header {
   width: 100%;
   padding-bottom: 4%;
   z-index: 1;
-  background-color: white;
 }
 
 .logo {
@@ -204,7 +218,7 @@ header {
 
 .menu {
   display: none;
-  padding: 5% 0% 2% 0%;
+  padding: 5%;
   background-color: white;
 }
 .menu__linkChoose {
@@ -244,11 +258,6 @@ header {
     top: 0;
     padding-bottom: 0%;
   }
-  .logo {
-    position: absolute;
-    top: 38%;
-    width: 20%;
-  }
   .information {
     display: flex;
     justify-content: space-between;
@@ -271,7 +280,7 @@ header {
   }
   .information__img {
     position: absolute;
-    top: 15%;
+    top: 6%;
     width: 1.2rem;
   }
   .toggle::before {
@@ -357,6 +366,9 @@ header {
   .language .toggle::before {
     display: none;
   }
+  .language .menu {
+    padding: 0;
+  }
   .language .menu__linkChoose {
     font-size: 1rem;
     position: relative;
@@ -374,7 +386,6 @@ header {
     position: relative;
   }
 }
-<<<<<<<< HEAD:style/scss/finally_style/home.css
 .home {
   overflow: hidden;
 }
@@ -383,69 +394,76 @@ header {
 }
 
 .intro {
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   color: #ffffff;
   min-height: 600px;
   width: 100%;
-  background-image: url("/image/home/home-h.png");
+  background-image: url("../../../image/home/home-h.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .intro__title {
-  width: 315px;
-  height: 138px;
-  position: absolute;
-  left: calc(50% - 157.5px);
-  top: calc(50% - 69px);
+  max-width: 315px;
+  width: 100%;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 38px;
   line-height: 46px;
 }
 .intro__btn {
-  width: 42px;
-  height: 42px;
-  position: absolute;
-  left: calc(50% - 21px);
-  bottom: 30px;
-  padding: 5px 0 0;
-  margin: 0;
+  max-width: 42px;
+  width: 100%;
+  margin-top: 160px;
+  margin-bottom: 30px;
   cursor: pointer;
-  opacity: 0.5;
+  border: none;
   background: none;
+}
+.intro__btn img {
+  padding: 15px 12px;
+  opacity: 0.5;
+  width: 18px;
+  height: 9px;
   border-radius: 100%;
   border: 2px solid #FFFFFF;
 }
-.intro__btn:hover {
+.intro__btn img:hover {
   border-color: #F0145A;
-}
-.intro__btn:hover svg {
-  fill: #F0145A;
 }
 
 .experience {
   width: 100%;
-  margin: 30px 0;
+}
+.experience__content {
+  display: flex;
+  flex-direction: column;
 }
 .experience__tabs {
   display: flex;
-  -webkit-hyphens: none;
-          hyphens: none;
+  width: 100%;
   gap: 30px;
   margin-bottom: 30px;
 }
 .experience__tabs label {
+  white-space: nowrap;
   cursor: pointer;
   font-weight: 700;
   font-size: 30px;
   line-height: 37px;
   color: #B3B3BA;
 }
+.experience__tabs label:hover {
+  color: #F0145A;
+}
 .experience input {
   display: none;
 }
-.experience input[id=tab1]:checked ~ .experience__tabs label[for=tab1], .experience input[id=tab2]:checked ~ .experience__tabs label[for=tab2], .experience input[id=tab3]:checked ~ .experience__tabs label[for=tab3], .experience input[id=tab4]:checked ~ .experience__tabs label[for=tab4] {
+.experience input[id=tab1]:checked ~ .experience__content label[for=tab1], .experience input[id=tab2]:checked ~ .experience__content label[for=tab2], .experience input[id=tab3]:checked ~ .experience__content label[for=tab3], .experience input[id=tab4]:checked ~ .experience__content label[for=tab4] {
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -454,17 +472,23 @@ header {
 .experience input[id=tab1]:checked ~ .experience__content .tab1, .experience input[id=tab2]:checked ~ .experience__content .tab2, .experience input[id=tab3]:checked ~ .experience__content .tab3, .experience input[id=tab4]:checked ~ .experience__content .tab4 {
   display: block;
 }
-.experience__article {
-  display: none;
-  color: #ffffff;
+.experience__items {
+  display: flex;
+  flex-direction: column;
 }
-.experience__article::before {
+.experience__items::before {
   content: "";
   display: block;
   height: 4px;
   width: 100%;
   margin-bottom: 30px;
   background: rgba(255, 255, 255, 0.3);
+}
+.experience__article {
+  display: none;
+  max-width: 100%;
+  width: 100%;
+  color: #ffffff;
 }
 .experience__title {
   font-weight: 700;
@@ -478,6 +502,86 @@ header {
   line-height: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  .home__bg {
+    gap: 60px;
+  }
+  .intro {
+    min-height: 1024px;
+    background-size: cover;
+  }
+  .intro__title {
+    max-width: 800px;
+  }
+  .intro__btn {
+    margin-top: 420px;
+  }
+  .experience__tabs label {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .experience__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .intro {
+    min-height: 768px;
+    background-size: contain;
+  }
+  .intro__btn {
+    margin-top: 290px;
+  }
+  .experience__content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .experience__tabs {
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 375px;
+    margin-bottom: 0;
+  }
+  .experience__article {
+    max-width: 405px;
+  }
+  .experience__items {
+    flex-direction: row;
+    align-items: center;
+  }
+  .experience__items::before {
+    display: block;
+    margin: 0 60px;
+    height: 303px;
+    width: 4px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .intro {
+    min-height: 800px;
+  }
+  .intro__btn {
+    margin-top: 405px;
+  }
+  .experience__article {
+    max-width: 580px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .intro {
+    min-height: 1000px;
+  }
+  .intro__btn {
+    margin-top: 305px;
+  }
+  .experience__article {
+    max-width: 860px;
+  }
+}
 .services__intro {
   color: #ffffff;
   width: 100%;
@@ -490,7 +594,7 @@ header {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 .services__intro__content {
   width: 100%;
@@ -539,7 +643,7 @@ header {
   margin-top: 15px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .services__intro__content {
     margin-top: 60px;
   }
@@ -547,8 +651,6 @@ header {
     max-width: 294px;
     margin-bottom: 60px;
   }
-}
-@media screen and (min-width: 720px) {
   .services__intro__title {
     font-weight: 700;
     font-size: 38px;
@@ -571,8 +673,6 @@ header {
     max-width: 490px;
   }
 }
-========
->>>>>>>> f7343cee72096d39970765185580098de030f2b8:style/css/about.css
 .footer {
   display: flex;
   flex-direction: column;
@@ -585,7 +685,7 @@ header {
   color: #B3B3BA;
   font-weight: bold;
   font-size: 0.8rem;
-  padding-bottom: 2%;
+  padding-bottom: 6%;
 }
 
 .contact {
@@ -613,4 +713,4 @@ header {
 }
 .contact__email:hover {
   color: #F0145A;
-}/*# sourceMappingURL=home.css.map */
+}

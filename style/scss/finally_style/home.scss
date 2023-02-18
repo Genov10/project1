@@ -10,19 +10,33 @@
     }
 }
 
+<<<<<<< HEAD
 .intro {
     position: relative;
+=======
+// ---------------- //
+.intro {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+>>>>>>> f7343cee72096d39970765185580098de030f2b8
     text-align: center;
     color: #ffffff;
 
     min-height: 600px;
     width: 100%;
 
+<<<<<<< HEAD
     background-image: url("/image/home/home-h.png");
+=======
+    background-image: url("../../../image/home/home-h.png");
+>>>>>>> f7343cee72096d39970765185580098de030f2b8
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     
+<<<<<<< HEAD
     &__title {
         width: 315px;
         height: 138px;
@@ -75,16 +89,88 @@
             @include h2;
             color: $text;
         }
+=======
+    
+    &__title {
+        max-width: 315px;
+        width: 100%;
+        margin: 0 auto;
+
+        @include h1;
+    }
+
+    &__btn {
+        max-width: 42px;
+        width: 100%;
+
+        margin-top: 160px;
+        margin-bottom: 30px;
+
+        cursor: pointer;
+        border: none;
+        background: none;
+        
+        img {
+            padding: 15px 12px;
+            opacity: 0.5;
+            width: 18px;
+            height: 9px;
+
+            border-radius: 100%;
+            border: 2px solid #FFFFFF;
+
+            &:hover {
+                border-color: $accent;
+            }
+        }
+    }
+}
+
+// ---------------- //
+.experience {
+    width: 100%;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tabs {
+        display: flex;
+        width: 100%;
+        gap: 30px;
+        margin-bottom: 30px;
+        
+        
+        label {
+            white-space: nowrap;
+            cursor: pointer;
+            @include h2;
+            color: $text;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+        
+>>>>>>> f7343cee72096d39970765185580098de030f2b8
     }
 
     & input {
         display: none;
     }
 
+<<<<<<< HEAD
     & input[id="tab1"]:checked~ &__tabs label[for="tab1"],
     & input[id="tab2"]:checked~ &__tabs label[for="tab2"],
     & input[id="tab3"]:checked~ &__tabs label[for="tab3"],
     & input[id="tab4"]:checked~ &__tabs label[for="tab4"] {
+=======
+    & input[id="tab1"]:checked~ &__content label[for="tab1"],
+    & input[id="tab2"]:checked~ &__content label[for="tab2"],
+    & input[id="tab3"]:checked~ &__content label[for="tab3"],
+    & input[id="tab4"]:checked~ &__content label[for="tab4"] {
+>>>>>>> f7343cee72096d39970765185580098de030f2b8
         background: $gragient-red-text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -98,11 +184,17 @@
         display: block;
     }
 
+<<<<<<< HEAD
 
     &__article{
         display: none;
         color: #ffffff;
 
+=======
+    &__items {
+        display: flex;
+        flex-direction: column;
+>>>>>>> f7343cee72096d39970765185580098de030f2b8
         &::before {
             content: '';
             display: block;
@@ -112,6 +204,15 @@
             background:  rgba(255, 255, 255, 0.3);
         }
     }
+<<<<<<< HEAD
+=======
+    &__article {
+        display: none;
+        max-width: 100%;
+        width: 100%;
+        color: #ffffff;
+    }
+>>>>>>> f7343cee72096d39970765185580098de030f2b8
 
     &__title {
         @include titles(20px, 24px);
@@ -122,6 +223,99 @@
         @include text(30px, 19px);
     }
 }
+<<<<<<< HEAD
+=======
+
+// Media home
+@media screen and (min-width: 768px) {
+    .home {
+        &__bg {
+            gap: 60px;
+        }
+    }
+    .intro {
+        min-height: 1024px;
+        background-size: cover;
+
+        &__title {
+            max-width: 800px;
+        }
+
+        &__btn {
+            margin-top: 420px;
+        }
+    }
+    .experience__tabs {
+        label {
+            @include h1; 
+        }
+    }
+    .experience__title {
+        @include h2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .intro {
+        min-height: 768px;
+        background-size: contain;
+        &__btn {
+            margin-top: 290px;
+        }
+    }
+    
+    .experience__content { 
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .experience__tabs {
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 375px;
+        margin-bottom: 0;
+    }
+    .experience__article {
+        max-width: 405px;
+    }
+    .experience__items {
+        flex-direction: row;
+        align-items: center;
+        &::before {
+            display: block;
+            margin: 0 60px;
+            height: 303px;
+            width: 4px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .intro {
+        min-height: 800px;
+        
+        &__btn {
+            margin-top: 405px;
+        }
+    }
+    .experience__article {
+        max-width: 580px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .intro {
+        min-height: 1000px;
+
+        &__btn {
+            margin-top: 305px;
+        }
+    }
+    .experience__article {
+        max-width: 860px;
+    }
+}
+>>>>>>> f7343cee72096d39970765185580098de030f2b8
 //---------------------------------//
 @import "../blocks/section/services-intro";
 @import "../blocks/section/footer";

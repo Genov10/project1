@@ -55,10 +55,6 @@ table {
   border-spacing: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 html,
 body {
   font-weight: 400;
@@ -107,17 +103,6 @@ body {
     max-width: 1600px;
   }
 }
-<<<<<<<< HEAD:style/scss/finally_style/home.css
-[class*=__splach] {
-  padding: 0px 0px 60px;
-  /* Gradient / Supersoft */
-  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-  border-radius: 0px 0px 12px 12px;
-  box-shadow: 0 10px #CACADB;
-}
-
-========
->>>>>>>> f7343cee72096d39970765185580098de030f2b8:style/css/about.css
 header {
   position: fixed;
   left: 0;
@@ -125,7 +110,6 @@ header {
   width: 100%;
   padding-bottom: 4%;
   z-index: 1;
-  background-color: white;
 }
 
 .logo {
@@ -204,7 +188,7 @@ header {
 
 .menu {
   display: none;
-  padding: 5% 0% 2% 0%;
+  padding: 5%;
   background-color: white;
 }
 .menu__linkChoose {
@@ -244,11 +228,6 @@ header {
     top: 0;
     padding-bottom: 0%;
   }
-  .logo {
-    position: absolute;
-    top: 38%;
-    width: 20%;
-  }
   .information {
     display: flex;
     justify-content: space-between;
@@ -271,7 +250,7 @@ header {
   }
   .information__img {
     position: absolute;
-    top: 15%;
+    top: 6%;
     width: 1.2rem;
   }
   .toggle::before {
@@ -357,6 +336,9 @@ header {
   .language .toggle::before {
     display: none;
   }
+  .language .menu {
+    padding: 0;
+  }
   .language .menu__linkChoose {
     font-size: 1rem;
     position: relative;
@@ -374,205 +356,6 @@ header {
     position: relative;
   }
 }
-<<<<<<<< HEAD:style/scss/finally_style/home.css
-.home {
-  overflow: hidden;
-}
-.home__splach {
-  gap: 30px;
-}
-
-.intro {
-  position: relative;
-  text-align: center;
-  color: #ffffff;
-  min-height: 600px;
-  width: 100%;
-  background-image: url("/image/home/home-h.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.intro__title {
-  width: 315px;
-  height: 138px;
-  position: absolute;
-  left: calc(50% - 157.5px);
-  top: calc(50% - 69px);
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 46px;
-}
-.intro__btn {
-  width: 42px;
-  height: 42px;
-  position: absolute;
-  left: calc(50% - 21px);
-  bottom: 30px;
-  padding: 5px 0 0;
-  margin: 0;
-  cursor: pointer;
-  opacity: 0.5;
-  background: none;
-  border-radius: 100%;
-  border: 2px solid #FFFFFF;
-}
-.intro__btn:hover {
-  border-color: #F0145A;
-}
-.intro__btn:hover svg {
-  fill: #F0145A;
-}
-
-.experience {
-  width: 100%;
-  margin: 30px 0;
-}
-.experience__tabs {
-  display: flex;
-  -webkit-hyphens: none;
-          hyphens: none;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-.experience__tabs label {
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 37px;
-  color: #B3B3BA;
-}
-.experience input {
-  display: none;
-}
-.experience input[id=tab1]:checked ~ .experience__tabs label[for=tab1], .experience input[id=tab2]:checked ~ .experience__tabs label[for=tab2], .experience input[id=tab3]:checked ~ .experience__tabs label[for=tab3], .experience input[id=tab4]:checked ~ .experience__tabs label[for=tab4] {
-  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.experience input[id=tab1]:checked ~ .experience__content .tab1, .experience input[id=tab2]:checked ~ .experience__content .tab2, .experience input[id=tab3]:checked ~ .experience__content .tab3, .experience input[id=tab4]:checked ~ .experience__content .tab4 {
-  display: block;
-}
-.experience__article {
-  display: none;
-  color: #ffffff;
-}
-.experience__article::before {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 100%;
-  margin-bottom: 30px;
-  background: rgba(255, 255, 255, 0.3);
-}
-.experience__title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 30px;
-}
-.experience__text {
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 30px;
-}
-
-.services__intro {
-  color: #ffffff;
-  width: 100%;
-}
-.services__intro__title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 37px;
-  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 10px;
-}
-.services__intro__content {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-.services__intro__item {
-  width: 100%;
-  margin-bottom: 30px;
-}
-.services__intro__icon {
-  position: relative;
-  width: 92px;
-  height: 92px;
-  background-color: #ffffff;
-  border-radius: 24px;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-.services__intro__icon img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  height: 64px;
-}
-.services__intro__title-link {
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 27px;
-  color: #24A3FF;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.2s ease-in;
-}
-.services__intro__title-link:hover {
-  color: #0085FF;
-}
-.services__intro__text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  margin-top: 15px;
-}
-
-@media screen and (min-width: 480px) {
-  .services__intro__content {
-    margin-top: 60px;
-  }
-  .services__intro__item {
-    max-width: 294px;
-    margin-bottom: 60px;
-  }
-}
-@media screen and (min-width: 720px) {
-  .services__intro__title {
-    font-weight: 700;
-    font-size: 38px;
-    line-height: 46px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .services__intro__item {
-    max-width: 260px;
-    margin-bottom: 60px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .services__intro__item {
-    max-width: 400px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .services__intro__item {
-    max-width: 490px;
-  }
-}
-========
->>>>>>>> f7343cee72096d39970765185580098de030f2b8:style/css/about.css
 .footer {
   display: flex;
   flex-direction: column;
@@ -585,7 +368,7 @@ header {
   color: #B3B3BA;
   font-weight: bold;
   font-size: 0.8rem;
-  padding-bottom: 2%;
+  padding-bottom: 6%;
 }
 
 .contact {
@@ -613,4 +396,4 @@ header {
 }
 .contact__email:hover {
   color: #F0145A;
-}/*# sourceMappingURL=home.css.map */
+}
