@@ -411,11 +411,11 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 30px;
   margin-top: 30px;
 }
 .services__intro__item {
   width: 100%;
-  margin-bottom: 30px;
 }
 .services__intro__icon {
   position: relative;
@@ -456,10 +456,10 @@ header {
 @media screen and (min-width: 480px) {
   .services__intro__content {
     margin-top: 60px;
+    gap: 60px;
   }
   .services__intro__item {
-    max-width: 294px;
-    margin-bottom: 60px;
+    max-width: 290px;
   }
 }
 @media screen and (min-width: 800px) {
@@ -472,7 +472,6 @@ header {
 @media screen and (min-width: 1024px) {
   .services__intro__item {
     max-width: 260px;
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1440px) {

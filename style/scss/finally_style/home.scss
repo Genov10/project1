@@ -10,6 +10,7 @@
     }
 }
 
+// ---------------- //
 .intro {
     display: flex;
     justify-content: flex-end;
@@ -30,41 +31,41 @@
     background-size: cover;
 
     &__title {
-        width: 315px;
-        height: 138px;
-
-        position: absolute;
-        left: calc(50% - 315px/2);
-        top: calc(50% - 138px/2);
+        max-width: 315px;
+        width: 100%;
+        margin: 0 auto;
         @include h1;
     }
 
     &__btn {
-        width: 42px;
-        height: 42px;
+        max-width: 42px;
+        width: 100%;
 
-        position: absolute;
-        left: calc(50% - 42px/2);
-        bottom: 30px;
+        margin-top: 160px;
+        margin-bottom: 30px;
 
         padding: 5px 0 0;
-        margin: 0;
 
+        border: none;
         cursor: pointer;
-        opacity: 0.5;
         background: none;
 
-        border-radius: 100%;
-        border: 2px solid #FFFFFF;
+        img {
+            padding: 15px 12px;
+            opacity: 0.5;
+            width: 18px;
+            height: 9px;
 
-        &:hover {
-            svg {
-                fill: $accent;
+            border-radius: 100%;
+            border: 2px solid #FFFFFF;
+
+            &:hover {
+                border-color: $accent;
             }
-            border-color: $accent;
         }
     }
 }
+
 
 // ---------------- //
 .experience {
@@ -148,6 +149,84 @@
     }
 }
 
+// ---------------- //
+.team {
+    margin: 30px 0 60px;
+
+    &__slider {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    &__slide {
+        display: none;
+        flex-direction: column;
+
+        background: #F5F5FA;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    &__photo {
+        display: flex;
+        justify-content: center;
+        max-height: 500px;
+    }
+    
+    &__content {
+        padding: 30px;
+    }
+    
+
+    &__title {
+        @include h2;
+
+        background: $gragient-red-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        margin-top: 5px;
+    }
+
+    &__author {
+        line-height: 20px;
+        font-weight: 700;
+        color: $text;
+
+        margin: 30px 0 6px;
+    }
+
+    &__text {
+        @include text(22px);
+        color: $text;
+    }
+
+	&__dots {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		margin-top: 30px;
+	}
+
+	&__dot {
+		width: 16px;
+		height: 16px;
+
+		border-radius: 50%;
+		background: $active;
+		opacity: 0.2;
+		
+        cursor: pointer;
+
+		&.active {
+			opacity: 1;
+		}
+	}
+}
+
+// ---------------- //
 // Media home
 @media screen and (min-width: 800px) {
     .home {
@@ -167,13 +246,26 @@
             margin-top: 420px;
         }
     }
-    .experience__tabs {
+    .experience{
+        &__tabs 
         label {
             @include h1; 
         }
+        &__title {
+            @include h2;
+        }
     }
-    .experience__title {
-        @include h2;
+
+    .team {
+        margin-top: 60px;
+        &__photo {
+            img {
+                width: 100%;
+            }
+        }
+        &__title {
+            @include h1;
+        }
     }
 }
 
@@ -186,30 +278,45 @@
         }
     }
     
-    .experience__content { 
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-    .experience__tabs {
-        flex-direction: column;
-        align-items: flex-end;
-        max-width: 375px;
-        margin-bottom: 0;
-    }
-    .experience__article {
-        max-width: 405px;
-    }
-    .experience__items {
-        flex-direction: row;
-        align-items: center;
-        &::before {
-            display: block;
-            margin: 0 60px;
-            height: 303px;
-            width: 4px;
+    .experience {
+        &__content { 
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        &__tabs {
+            flex-direction: column;
+            align-items: flex-end;
+            max-width: 375px;
+            margin-bottom: 0;
+        }
+        &__article {
+            max-width: 405px;
+        }
+        &__items {
+            flex-direction: row;
+            align-items: center;
+            &::before {
+                display: block;
+                margin: 0 60px;
+                height: 303px;
+                width: 4px;
+            }
         }
     }
+
+	.team {
+		&__slide {
+			flex-direction: row;
+		}
+		&__photo {
+            max-height: 600px;
+			img {
+				width: 400px;
+                object-fit: cover;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 1440px) {
@@ -223,6 +330,11 @@
     .experience__article {
         max-width: 580px;
     }
+    .team {
+		&__photo {
+            max-height: 360px;
+		}
+	}
 }
 
 @media screen and (min-width: 1920px) {
@@ -236,6 +348,11 @@
     .experience__article {
         max-width: 860px;
     }
+    .team {
+		&__photo {
+            max-height: 310px;
+		}
+	}
 }
 
 //---------------------------------//
