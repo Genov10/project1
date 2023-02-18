@@ -4,8 +4,7 @@
 /*-  Gray text-*/
 /*-  Grey separator -*/
 /*- Gragient -*/
-/*- Mixins -*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/*- Mixins -*/ /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -55,6 +54,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 html,
 body {
   font-weight: 400;
@@ -83,7 +86,7 @@ body {
   color: #F0145A;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .container {
     max-width: 640px;
   }
@@ -140,6 +143,7 @@ header {
   width: 100%;
   padding-bottom: 4%;
   z-index: 1;
+  background-color: white;
 }
 
 .logo {
@@ -218,7 +222,7 @@ header {
 
 .menu {
   display: none;
-  padding: 5%;
+  padding: 5% 0% 2% 0%;
   background-color: white;
 }
 .menu__linkChoose {
@@ -258,6 +262,11 @@ header {
     top: 0;
     padding-bottom: 0%;
   }
+  .logo {
+    position: absolute;
+    top: 38%;
+    width: 20%;
+  }
   .information {
     display: flex;
     justify-content: space-between;
@@ -280,7 +289,7 @@ header {
   }
   .information__img {
     position: absolute;
-    top: 6%;
+    top: 15%;
     width: 1.2rem;
   }
   .toggle::before {
@@ -313,7 +322,7 @@ header {
     top: 6%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .header {
     position: fixed;
     left: 0;
@@ -366,9 +375,6 @@ header {
   .language .toggle::before {
     display: none;
   }
-  .language .menu {
-    padding: 0;
-  }
   .language .menu__linkChoose {
     font-size: 1rem;
     position: relative;
@@ -408,32 +414,34 @@ header {
   background-size: cover;
 }
 .intro__title {
-  max-width: 315px;
-  width: 100%;
-  margin: 0 auto;
+  width: 315px;
+  height: 138px;
+  position: absolute;
+  left: calc(50% - 157.5px);
+  top: calc(50% - 69px);
   font-weight: 700;
   font-size: 38px;
   line-height: 46px;
 }
 .intro__btn {
-  max-width: 42px;
-  width: 100%;
-  margin-top: 160px;
-  margin-bottom: 30px;
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: calc(50% - 21px);
+  bottom: 30px;
+  padding: 5px 0 0;
+  margin: 0;
   cursor: pointer;
-  border: none;
-  background: none;
-}
-.intro__btn img {
-  padding: 15px 12px;
   opacity: 0.5;
-  width: 18px;
-  height: 9px;
+  background: none;
   border-radius: 100%;
   border: 2px solid #FFFFFF;
 }
-.intro__btn img:hover {
+.intro__btn:hover {
   border-color: #F0145A;
+}
+.intro__btn:hover svg {
+  fill: #F0145A;
 }
 
 .experience {
@@ -502,7 +510,7 @@ header {
   line-height: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .home__bg {
     gap: 60px;
   }
@@ -643,7 +651,7 @@ header {
   margin-top: 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .services__intro__content {
     margin-top: 60px;
   }
@@ -651,6 +659,8 @@ header {
     max-width: 294px;
     margin-bottom: 60px;
   }
+}
+@media screen and (min-width: 800px) {
   .services__intro__title {
     font-weight: 700;
     font-size: 38px;
@@ -685,7 +695,7 @@ header {
   color: #B3B3BA;
   font-weight: bold;
   font-size: 0.8rem;
-  padding-bottom: 6%;
+  padding-bottom: 2%;
 }
 
 .contact {

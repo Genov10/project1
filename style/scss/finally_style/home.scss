@@ -10,33 +10,25 @@
     }
 }
 
-<<<<<<< HEAD
-.intro {
-    position: relative;
-=======
-// ---------------- //
 .intro {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
->>>>>>> f7343cee72096d39970765185580098de030f2b8
+
     text-align: center;
     color: #ffffff;
 
     min-height: 600px;
     width: 100%;
 
-<<<<<<< HEAD
-    background-image: url("/image/home/home-h.png");
-=======
+
+
     background-image: url("../../../image/home/home-h.png");
->>>>>>> f7343cee72096d39970765185580098de030f2b8
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
-<<<<<<< HEAD
+
     &__title {
         width: 315px;
         height: 138px;
@@ -46,6 +38,7 @@
         top: calc(50% - 138px/2);
         @include h1;
     }
+
     &__btn {
         width: 42px;
         height: 42px;
@@ -69,59 +62,6 @@
                 fill: $accent;
             }
             border-color: $accent;
-        }
-    }
-}
-.experience {
-    width: 100%;
-    margin: 30px 0;
-
-    
-    &__tabs {
-        display: flex;
-        hyphens: none;
-        gap: 30px;
-        margin-bottom: 30px;
-
-        
-        label {
-            cursor: pointer;
-            @include h2;
-            color: $text;
-        }
-=======
-    
-    &__title {
-        max-width: 315px;
-        width: 100%;
-        margin: 0 auto;
-
-        @include h1;
-    }
-
-    &__btn {
-        max-width: 42px;
-        width: 100%;
-
-        margin-top: 160px;
-        margin-bottom: 30px;
-
-        cursor: pointer;
-        border: none;
-        background: none;
-        
-        img {
-            padding: 15px 12px;
-            opacity: 0.5;
-            width: 18px;
-            height: 9px;
-
-            border-radius: 100%;
-            border: 2px solid #FFFFFF;
-
-            &:hover {
-                border-color: $accent;
-            }
         }
     }
 }
@@ -152,25 +92,16 @@
                 color: $accent;
             }
         }
-        
->>>>>>> f7343cee72096d39970765185580098de030f2b8
     }
 
     & input {
         display: none;
     }
 
-<<<<<<< HEAD
-    & input[id="tab1"]:checked~ &__tabs label[for="tab1"],
-    & input[id="tab2"]:checked~ &__tabs label[for="tab2"],
-    & input[id="tab3"]:checked~ &__tabs label[for="tab3"],
-    & input[id="tab4"]:checked~ &__tabs label[for="tab4"] {
-=======
     & input[id="tab1"]:checked~ &__content label[for="tab1"],
     & input[id="tab2"]:checked~ &__content label[for="tab2"],
     & input[id="tab3"]:checked~ &__content label[for="tab3"],
     & input[id="tab4"]:checked~ &__content label[for="tab4"] {
->>>>>>> f7343cee72096d39970765185580098de030f2b8
         background: $gragient-red-text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -184,17 +115,11 @@
         display: block;
     }
 
-<<<<<<< HEAD
 
-    &__article{
-        display: none;
-        color: #ffffff;
-
-=======
     &__items {
         display: flex;
         flex-direction: column;
->>>>>>> f7343cee72096d39970765185580098de030f2b8
+
         &::before {
             content: '';
             display: block;
@@ -204,15 +129,14 @@
             background:  rgba(255, 255, 255, 0.3);
         }
     }
-<<<<<<< HEAD
-=======
+
     &__article {
         display: none;
         max-width: 100%;
         width: 100%;
         color: #ffffff;
     }
->>>>>>> f7343cee72096d39970765185580098de030f2b8
+
 
     &__title {
         @include titles(20px, 24px);
@@ -223,11 +147,9 @@
         @include text(30px, 19px);
     }
 }
-<<<<<<< HEAD
-=======
 
 // Media home
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
     .home {
         &__bg {
             gap: 60px;
@@ -315,7 +237,7 @@
         max-width: 860px;
     }
 }
->>>>>>> f7343cee72096d39970765185580098de030f2b8
+
 //---------------------------------//
 @import "../blocks/section/services-intro";
 @import "../blocks/section/footer";
