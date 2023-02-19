@@ -15,12 +15,12 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 30px;
         margin-top: 30px;
     }
 
     &__item {
         width: 100%;	
-        margin-bottom: 30px;
     }
     &__icon {
 		position: relative;
@@ -61,26 +61,17 @@
     }
 }
 
-<<<<<<< HEAD
+
 @media screen and (min-width: 480px) {
 	.services__intro__content {
-=======
-
-@media screen and (min-width: 768px) {
-    .services__intro__content {
->>>>>>> f7343cee72096d39970765185580098de030f2b8
         margin-top: 60px;
+        gap: 60px;
 	}
 	.services__intro__item {
-		max-width: 294px;
-        margin-bottom: 60px;
+		max-width: 290px;
 	}
-<<<<<<< HEAD
 }
-@media screen and (min-width: 720px) {
-=======
-
->>>>>>> f7343cee72096d39970765185580098de030f2b8
+@media screen and (min-width: 800px) {
 	.services__intro__title {
         @include h1
     }
@@ -88,13 +79,11 @@
 @media screen and (min-width: 1024px) {
 	.services__intro__item {
 		max-width: 260px;
-        margin-bottom: 60px;
 	}
 }
 @media screen and (min-width: 1440px) {
     .services__intro__item {
         max-width: 400px;
-        //margin-bottom: 60px;
     }
 }
 @media screen and (min-width: 1920px) {

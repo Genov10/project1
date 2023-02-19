@@ -4,8 +4,7 @@
 /*-  Gray text-*/
 /*-  Grey separator -*/
 /*- Gragient -*/
-/*- Mixins -*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/*- Mixins -*/ /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -55,6 +54,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 html,
 body {
   font-weight: 400;
@@ -83,7 +86,7 @@ body {
   color: #F0145A;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .container {
     max-width: 640px;
   }
@@ -140,6 +143,7 @@ header {
   width: 100%;
   padding-bottom: 4%;
   z-index: 1;
+  background-color: white;
 }
 
 .logo {
@@ -218,7 +222,7 @@ header {
 
 .menu {
   display: none;
-  padding: 5%;
+  padding: 5% 0% 2% 0%;
   background-color: white;
 }
 .menu__linkChoose {
@@ -258,6 +262,11 @@ header {
     top: 0;
     padding-bottom: 0%;
   }
+  .logo {
+    position: absolute;
+    top: 38%;
+    width: 20%;
+  }
   .information {
     display: flex;
     justify-content: space-between;
@@ -280,7 +289,7 @@ header {
   }
   .information__img {
     position: absolute;
-    top: 6%;
+    top: 15%;
     width: 1.2rem;
   }
   .toggle::before {
@@ -313,7 +322,7 @@ header {
     top: 6%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .header {
     position: fixed;
     left: 0;
@@ -366,9 +375,6 @@ header {
   .language .toggle::before {
     display: none;
   }
-  .language .menu {
-    padding: 0;
-  }
   .language .menu__linkChoose {
     font-size: 1rem;
     position: relative;
@@ -420,8 +426,9 @@ header {
   width: 100%;
   margin-top: 160px;
   margin-bottom: 30px;
-  cursor: pointer;
+  padding: 5px 0 0;
   border: none;
+  cursor: pointer;
   background: none;
 }
 .intro__btn img {
@@ -502,7 +509,70 @@ header {
   line-height: 30px;
 }
 
-@media screen and (min-width: 768px) {
+.team {
+  margin: 30px 0 60px;
+}
+.team__slider {
+  position: relative;
+  overflow: hidden;
+}
+.team__slide {
+  display: none;
+  flex-direction: column;
+  background: #F5F5FA;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.team__photo {
+  display: flex;
+  justify-content: center;
+  max-height: 500px;
+}
+.team__content {
+  padding: 30px;
+}
+.team__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 5px;
+}
+.team__author {
+  line-height: 20px;
+  font-weight: 700;
+  color: #B3B3BA;
+  margin: 30px 0 6px;
+}
+.team__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B3B3BA;
+}
+.team__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+.team__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #24A3FF;
+  opacity: 0.2;
+  cursor: pointer;
+}
+.team__dot.active {
+  opacity: 1;
+}
+
+@media screen and (min-width: 800px) {
   .home__bg {
     gap: 60px;
   }
@@ -525,6 +595,17 @@ header {
     font-weight: 700;
     font-size: 30px;
     line-height: 37px;
+  }
+  .team {
+    margin-top: 60px;
+  }
+  .team__photo img {
+    width: 100%;
+  }
+  .team__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -559,6 +640,17 @@ header {
     height: 303px;
     width: 4px;
   }
+  .team__slide {
+    flex-direction: row;
+  }
+  .team__photo {
+    max-height: 600px;
+  }
+  .team__photo img {
+    width: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 @media screen and (min-width: 1440px) {
   .intro {
@@ -570,6 +662,9 @@ header {
   .experience__article {
     max-width: 580px;
   }
+  .team__photo {
+    max-height: 360px;
+  }
 }
 @media screen and (min-width: 1920px) {
   .intro {
@@ -580,6 +675,9 @@ header {
   }
   .experience__article {
     max-width: 860px;
+  }
+  .team__photo {
+    max-height: 310px;
   }
 }
 .services__intro {
@@ -601,11 +699,11 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 30px;
   margin-top: 30px;
 }
 .services__intro__item {
   width: 100%;
-  margin-bottom: 30px;
 }
 .services__intro__icon {
   position: relative;
@@ -643,14 +741,16 @@ header {
   margin-top: 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .services__intro__content {
     margin-top: 60px;
+    gap: 60px;
   }
   .services__intro__item {
-    max-width: 294px;
-    margin-bottom: 60px;
+    max-width: 290px;
   }
+}
+@media screen and (min-width: 800px) {
   .services__intro__title {
     font-weight: 700;
     font-size: 38px;
@@ -660,7 +760,6 @@ header {
 @media screen and (min-width: 1024px) {
   .services__intro__item {
     max-width: 260px;
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -685,7 +784,7 @@ header {
   color: #B3B3BA;
   font-weight: bold;
   font-size: 0.8rem;
-  padding-bottom: 6%;
+  padding-bottom: 2%;
 }
 
 .contact {

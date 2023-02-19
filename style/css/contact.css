@@ -4,8 +4,7 @@
 /*-  Gray text-*/
 /*-  Grey separator -*/
 /*- Gragient -*/
-/*- Mixins -*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/*- Mixins -*/ /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -55,6 +54,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 html,
 body {
   font-weight: 400;
@@ -83,7 +86,7 @@ body {
   color: #F0145A;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .container {
     max-width: 640px;
   }
@@ -110,6 +113,7 @@ header {
   width: 100%;
   padding-bottom: 4%;
   z-index: 1;
+  background-color: white;
 }
 
 .logo {
@@ -188,7 +192,7 @@ header {
 
 .menu {
   display: none;
-  padding: 5%;
+  padding: 5% 0% 2% 0%;
   background-color: white;
 }
 .menu__linkChoose {
@@ -228,6 +232,11 @@ header {
     top: 0;
     padding-bottom: 0%;
   }
+  .logo {
+    position: absolute;
+    top: 38%;
+    width: 20%;
+  }
   .information {
     display: flex;
     justify-content: space-between;
@@ -250,7 +259,7 @@ header {
   }
   .information__img {
     position: absolute;
-    top: 6%;
+    top: 15%;
     width: 1.2rem;
   }
   .toggle::before {
@@ -283,7 +292,7 @@ header {
     top: 6%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .header {
     position: fixed;
     left: 0;
@@ -336,9 +345,6 @@ header {
   .language .toggle::before {
     display: none;
   }
-  .language .menu {
-    padding: 0;
-  }
   .language .menu__linkChoose {
     font-size: 1rem;
     position: relative;
@@ -356,6 +362,137 @@ header {
     position: relative;
   }
 }
+.conteiner {
+  margin-top: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.info {
+  width: 90%;
+  margin-left: 5%;
+}
+.info__address, .info__number {
+  color: #46466E;
+  box-shadow: 0 10px 0 #E6E6F0;
+}
+.info__number {
+  padding-top: 4%;
+}
+.info__facebookImage {
+  padding-top: 4%;
+  width: 10%;
+  float: left;
+}
+.info__facebookText {
+  padding: 4%;
+  color: #B3B3BA;
+  font-weight: bold;
+}
+
+.form {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  background-color: #E6E6F0;
+  border-radius: 6px;
+}
+.form__header {
+  margin-top: 2%;
+  color: #F0145A;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.form__text {
+  margin-left: 10%;
+  margin-top: 2%;
+  color: #B3B3BA;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.form .input {
+  margin: 2% 0% 2% 9%;
+  width: 80%;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.form__message {
+  height: 8rem;
+}
+.form__button {
+  display: block;
+  width: 40%;
+  margin: 3% auto;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #24A3FF;
+  border: 2px solid #24A3FF;
+  box-shadow: 0 0 4px #24A3FF;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.form__button:hover {
+  background-color: #F0145A;
+  border: 2px solid #F0145A;
+  box-shadow: 0 0 25px #F0145A;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 480px) {
+  .conteiner {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .info {
+    width: 40%;
+    margin-left: 0%;
+  }
+  .form {
+    width: 40%;
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+  .form__header {
+    margin-top: 4%;
+    font-size: 4vw;
+  }
+  .form__button {
+    display: block;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 840px) {
+  .conteiner {
+    margin-top: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .info {
+    width: 40%;
+    margin-left: 0%;
+  }
+  .form {
+    width: 40%;
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+  .form__header {
+    margin-top: 4%;
+    font-size: 2rem;
+  }
+  .form__button {
+    display: block;
+    width: 40%;
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -368,7 +505,7 @@ header {
   color: #B3B3BA;
   font-weight: bold;
   font-size: 0.8rem;
-  padding-bottom: 6%;
+  padding-bottom: 2%;
 }
 
 .contact {

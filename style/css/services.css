@@ -4,8 +4,7 @@
 /*-  Gray text-*/
 /*-  Grey separator -*/
 /*- Gragient -*/
-/*- Mixins -*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/*- Mixins -*/ /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -87,7 +86,7 @@ body {
   color: #F0145A;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .container {
     max-width: 640px;
   }
@@ -107,20 +106,13 @@ body {
     max-width: 1600px;
   }
 }
-<<<<<<<< HEAD:style/scss/finally_style/services.css
-[class*=__splach] {
-========
 [class*=__bg] {
   display: flex;
   flex-direction: column;
->>>>>>>> f7343cee72096d39970765185580098de030f2b8:style/css/services.css
   padding: 0px 0px 60px;
   /* Gradient / Supersoft */
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px;
-<<<<<<<< HEAD:style/scss/finally_style/services.css
-  box-shadow: 0 10px #CACADB;
-========
   gap: 30px;
 }
 
@@ -142,7 +134,6 @@ body {
   margin: 0 auto;
   background-color: #CACADB;
   border-radius: 0px 0px 12px 12px;
->>>>>>>> f7343cee72096d39970765185580098de030f2b8:style/css/services.css
 }
 
 header {
@@ -331,7 +322,7 @@ header {
     top: 6%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .header {
     position: fixed;
     left: 0;
@@ -420,11 +411,11 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 30px;
   margin-top: 30px;
 }
 .services__intro__item {
   width: 100%;
-  margin-bottom: 30px;
 }
 .services__intro__icon {
   position: relative;
@@ -462,14 +453,16 @@ header {
   margin-top: 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .services__intro__content {
     margin-top: 60px;
+    gap: 60px;
   }
   .services__intro__item {
-    max-width: 294px;
-    margin-bottom: 60px;
+    max-width: 290px;
   }
+}
+@media screen and (min-width: 800px) {
   .services__intro__title {
     font-weight: 700;
     font-size: 38px;
@@ -479,7 +472,6 @@ header {
 @media screen and (min-width: 1024px) {
   .services__intro__item {
     max-width: 260px;
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -532,4 +524,4 @@ header {
 }
 .contact__email:hover {
   color: #F0145A;
-}/*# sourceMappingURL=services.css.map */
+}

@@ -4,8 +4,7 @@
 /*-  Gray text-*/
 /*-  Grey separator -*/
 /*- Gragient -*/
-/*- Mixins -*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/*- Mixins -*/ /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -55,6 +54,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 html,
 body {
   font-weight: 400;
@@ -83,7 +86,7 @@ body {
   color: #F0145A;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .container {
     max-width: 640px;
   }
@@ -110,6 +113,7 @@ header {
   width: 100%;
   padding-bottom: 4%;
   z-index: 1;
+  background-color: white;
 }
 
 .logo {
@@ -188,7 +192,7 @@ header {
 
 .menu {
   display: none;
-  padding: 5%;
+  padding: 5% 0% 2% 0%;
   background-color: white;
 }
 .menu__linkChoose {
@@ -228,6 +232,11 @@ header {
     top: 0;
     padding-bottom: 0%;
   }
+  .logo {
+    position: absolute;
+    top: 38%;
+    width: 20%;
+  }
   .information {
     display: flex;
     justify-content: space-between;
@@ -250,7 +259,7 @@ header {
   }
   .information__img {
     position: absolute;
-    top: 6%;
+    top: 15%;
     width: 1.2rem;
   }
   .toggle::before {
@@ -283,7 +292,7 @@ header {
     top: 6%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .header {
     position: fixed;
     left: 0;
@@ -336,9 +345,6 @@ header {
   .language .toggle::before {
     display: none;
   }
-  .language .menu {
-    padding: 0;
-  }
   .language .menu__linkChoose {
     font-size: 1rem;
     position: relative;
@@ -368,7 +374,7 @@ header {
   color: #B3B3BA;
   font-weight: bold;
   font-size: 0.8rem;
-  padding-bottom: 6%;
+  padding-bottom: 2%;
 }
 
 .contact {
