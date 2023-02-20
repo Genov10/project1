@@ -1,0 +1,123 @@
+.services__cliens {
+	margin: 60px 0;
+	text-align: center;
+
+	&__title {
+		@include h3-caps;
+		color: $main;
+		margin-bottom: 30px;
+	}
+	&__content {
+		
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+}
+
+.rows {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+
+	max-width: 100%;
+	width: 100%;
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		max-width: 100%;
+		width: 100%;
+
+		height: 120px;
+
+		cursor: pointer;
+
+		img {
+			max-width: 50%;
+  			height: auto;
+		}
+		
+		&-hidden {
+			display: none;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+
+// COLOR BG
+//------------//
+.dark-blue {
+	background: #1C4280;
+}
+.blue {
+	background: #143646;
+}
+.orenge-bg {
+	background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+}
+.purple {
+	background: #9E4DC3;
+}
+.orenge {
+	background: #FD9339;
+}
+.light-yellow {
+	background: #E2E2E4;
+}
+.red {
+	background: #C71C36;
+}
+.light-white {
+	background: #DCF3F9;
+}
+.light-yellow2 {
+	background: #EAEAEA;
+} 
+.dark-purple {
+	background: #282240;
+}
+.dark-blue2 {
+	background: #1D4568;
+}
+.dark-purple {
+	background: #282240;
+}
+.dark {
+	background: #000000;
+}
+//------------//
+// COLOR BG
+@media screen and (min-width: 800px) {
+	.rows {
+		grid-template-columns: repeat(3, 1fr);
+
+		&__item-hidden {
+			display: flex;
+		}
+	}
+	
+}
+@media screen and (min-width: 1024px) {
+	.rows {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+@media screen and (min-width: 1440px) {
+    .rows__item {
+		img {
+			max-width: 40%;
+		}
+	}
+}
+@media screen and (min-width: 1920px) {
+    .rows__item {
+		img {
+			max-width: 30%;
+		}
+	}
+}

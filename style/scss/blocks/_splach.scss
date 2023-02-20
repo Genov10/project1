@@ -1,12 +1,13 @@
 [class*="__bg"] {
     display: flex;
     flex-direction: column;
-    padding: 0px 0px 60px;
+    padding-bottom: 60px;
 
     /* Gradient / Supersoft */
     background: $gragient-supersoft;
     border-radius: 0px 0px 12px 12px;
     gap: 30px;
+    color: #fff;
 }
 
 [class*="__shadow-second"] {

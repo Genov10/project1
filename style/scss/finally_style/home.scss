@@ -151,7 +151,7 @@
 
 // ---------------- //
 .team {
-    margin: 30px 0 60px;
+    margin-top: 30px;
 
     &__slider {
         position: relative;
@@ -342,7 +342,7 @@
         min-height: 1000px;
 
         &__btn {
-            margin-top: 305px;
+            margin-top: 405px;
         }
     }
     .experience__article {
@@ -357,4 +357,5 @@
 
 //---------------------------------//
 @import "../blocks/section/services-intro";
+@import "../blocks/section/section-cliens";
 @import "../blocks/section/footer";
