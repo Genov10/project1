@@ -1,5 +1,27 @@
 @import "../blocks/style";
+//---------//
+
+.services {
+	&__page{
+		padding-top: 130px;
+	}
+}
+
+//---------//
+@media screen and (min-width: 800px) {
+	.services__page {
+		padding-top: 280px;
+	}
+	
+}
+@media screen and (min-width: 1024px) {
+	.services__page {
+		padding-top: 175px;
+	}
+}
+
 @import "../blocks/splach";
 @import "../blocks/section/header";
 @import "../blocks/section/services-intro";
+@import "../blocks/section/section-cliens";
 @import "../blocks/section/footer";

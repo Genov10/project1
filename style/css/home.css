@@ -109,7 +109,7 @@ body {
 [class*=__bg] {
   display: flex;
   flex-direction: column;
-  padding: 0px 0px 60px;
+  padding-bottom: 60px;
   /* Gradient / Supersoft */
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px;
@@ -510,7 +510,7 @@ header {
 }
 
 .team {
-  margin: 30px 0 60px;
+  margin-top: 30px;
 }
 .team__slider {
   position: relative;
@@ -671,7 +671,7 @@ header {
     min-height: 1000px;
   }
   .intro__btn {
-    margin-top: 305px;
+    margin-top: 405px;
   }
   .experience__article {
     max-width: 860px;
@@ -770,6 +770,126 @@ header {
 @media screen and (min-width: 1920px) {
   .services__intro__item {
     max-width: 490px;
+  }
+}
+.services__cliens {
+  margin: 60px 0;
+  text-align: center;
+}
+.services__cliens__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #323264;
+  margin-bottom: 30px;
+}
+.services__cliens__content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.rows {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 100%;
+  width: 100%;
+}
+.rows__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+  height: 120px;
+  cursor: pointer;
+}
+.rows__item img {
+  max-width: 50%;
+  height: auto;
+}
+.rows__item-hidden {
+  display: none;
+}
+.rows__item:hover {
+  opacity: 0.7;
+}
+
+.dark-blue {
+  background: #1C4280;
+}
+
+.blue {
+  background: #143646;
+}
+
+.orenge-bg {
+  background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+}
+
+.purple {
+  background: #9E4DC3;
+}
+
+.orenge {
+  background: #FD9339;
+}
+
+.light-yellow {
+  background: #E2E2E4;
+}
+
+.red {
+  background: #C71C36;
+}
+
+.light-white {
+  background: #DCF3F9;
+}
+
+.light-yellow2 {
+  background: #EAEAEA;
+}
+
+.dark-purple {
+  background: #282240;
+}
+
+.dark-blue2 {
+  background: #1D4568;
+}
+
+.dark-purple {
+  background: #282240;
+}
+
+.dark {
+  background: #000000;
+}
+
+@media screen and (min-width: 800px) {
+  .rows {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .rows__item-hidden {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rows {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .rows__item img {
+    max-width: 40%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .rows__item img {
+    max-width: 30%;
   }
 }
 .footer {
